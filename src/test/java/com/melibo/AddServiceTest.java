@@ -11,6 +11,6 @@ public class AddServiceTest {
 
         Integer response = service.add(2, 3);
 
-        Assert.assertEquals(java.util.Optional.of(6), java.util.Optional.of(response));
+        Assert.assertEquals(java.util.Optional.of(5), java.util.Optional.of(response));
     }
 }
