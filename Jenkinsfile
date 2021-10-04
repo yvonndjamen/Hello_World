@@ -22,16 +22,16 @@ pipeline {
             steps {
                 bat './mvnw package'
             }
-            post {
-                success {
-                    archiveArtifacts 'outputFiles/skf003a/*.*'
-                }
-            }
         }
-        stage('Run JAR'){
+        stage('Run'){
             steps {
                 dir("target/"){
                     bat 'java -jar HelloWorld-1.0-SNAPSHOT.jar'
+                }
+            }
+            post {
+                success {
+                    archiveArtifacts 'outputFiles/skf003a/*.*'
                 }
             }
         }
