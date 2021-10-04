@@ -24,7 +24,7 @@ pipeline {
             }
             post {
                 success {
-                    archiveArtifacts 'outFiles/skf003a/*.*'
+                    archiveArtifacts 'outputFiles/skf003a/*.*'
                 }
             }
         }
