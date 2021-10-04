@@ -18,13 +18,20 @@ pipeline {
                 }
             }
         }
-        stage('Publish'){
+        stage('Package'){
             steps {
                 bat './mvnw package'
             }
             post {
                 success {
                     archiveArtifacts 'target/*.jar'
+                }
+            }
+        }
+        stage('Run JAR'){
+            steps {
+                dir("target/"){
+                    bat 'java -jar HelloWorld-1.0-SNAPSHOT.jar'
                 }
             }
         }
