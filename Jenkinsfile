@@ -33,6 +33,7 @@ pipeline {
                 dir("target/"){
                     bat 'java -jar HelloWorld-1.0-SNAPSHOT.jar'
                 }
+                sh 'touch Hello.World'
             }
         }
     }
