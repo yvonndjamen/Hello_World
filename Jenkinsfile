@@ -24,7 +24,7 @@ pipeline {
             }
             post {
                 success {
-                    archiveArtifacts 'target/*.jar'
+                    archiveArtifacts 'outFiles/skf003a/*.*'
                 }
             }
         }
@@ -33,7 +33,6 @@ pipeline {
                 dir("target/"){
                     bat 'java -jar HelloWorld-1.0-SNAPSHOT.jar'
                 }
-                sh 'touch Hello.World'
             }
         }
     }
