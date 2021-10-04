@@ -36,7 +36,7 @@ pipeline {
             }
             post {
                 always {
-                    archiveArtifacts 'outputFiles/*.DATA'
+                    archiveArtifacts 'outputFiles/*.zip'
                 }
             }
         }
