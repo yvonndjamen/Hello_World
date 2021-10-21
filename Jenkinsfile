@@ -4,7 +4,6 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                bat 'set NUMBER=5'
                 git 'https://github.com/yvonndjamen/Hello_World.git'
                 bat './mvnw clean compile'
             }
@@ -27,6 +26,7 @@ pipeline {
         stage('Run'){
             steps {
                 dir("target/"){
+                    bat 'set NUMBER=5'
                     bat 'java -jar HelloWorld-1.0-SNAPSHOT.jar'
                 }
             }
