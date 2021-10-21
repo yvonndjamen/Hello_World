@@ -4,6 +4,7 @@ pipeline {
     stages {
         stage('Build') {
             steps {
+                bat 'set NUMBER=5'
                 git 'https://github.com/yvonndjamen/Hello_World.git'
                 bat './mvnw clean compile'
             }
