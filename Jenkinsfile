@@ -26,7 +26,7 @@ pipeline {
         stage('Run'){
             steps {
                 dir("target/"){
-                    bat 'set NUMBER=5'
+                    //bat 'set NUMBER=5'
                     bat 'java -jar HelloWorld-1.0-SNAPSHOT.jar'
                 }
             }
